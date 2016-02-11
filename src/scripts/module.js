@@ -7,7 +7,7 @@
     .constant('intlTelInputOptions', {})
 
     .directive('intlTelInput', function (
-      phoneNumberInputOptions
+      intlTelInputOptions
     ) {
       return {
         restrict: 'AC',
@@ -19,7 +19,7 @@
         link: function link ($scope, $element, attrs, modelCtrl) {
 
           // Building options for this control.
-          var options = angular.extend({}, $scope.intlTelInputOptions || {}, phoneNumberInputOptions);
+          var options = angular.extend({}, $scope.intlTelInputOptions || {}, intlTelInputOptions);
 
           // Initializing the control with plugin.
           $element.intlTelInput(options);

@@ -1,6 +1,6 @@
 /**
- * betsol-ng-intl-tel-input - A template project for Angular.js modules
- * @version v0.0.1
+ * betsol-ng-intl-tel-input - intl-tel-input integration for Angular.js
+ * @version v0.0.2
  * @link https://github.com/betsol/ng-intl-tel-input
  * @license MIT
  *
@@ -14,8 +14,8 @@
 
     .constant('intlTelInputOptions', {})
 
-    .directive('intlTelInput', ['phoneNumberInputOptions', function (
-      phoneNumberInputOptions
+    .directive('intlTelInput', ['intlTelInputOptions', function (
+      intlTelInputOptions
     ) {
       return {
         restrict: 'AC',
@@ -27,7 +27,7 @@
         link: function link ($scope, $element, attrs, modelCtrl) {
 
           // Building options for this control.
-          var options = angular.extend({}, $scope.intlTelInputOptions || {}, phoneNumberInputOptions);
+          var options = angular.extend({}, $scope.intlTelInputOptions || {}, intlTelInputOptions);
 
           // Initializing the control with plugin.
           $element.intlTelInput(options);
