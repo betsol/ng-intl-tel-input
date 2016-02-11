@@ -1,0 +1,39 @@
+{
+  "name": "betsol-ng-intl-tel-input",
+  "description": "intl-tel-input integration for Angular.js",
+  "version": "0.0.1",
+  "main": "dist/betsol-ng-intl-tel-input.js",
+  "ignore": [
+    "src",
+    "test",
+    ".*",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "intl-tel-input": "^7.1.1"
+  },
+  "devDependencies": {
+    "angular": "~1",
+    "angular-mocks": "~1.4.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/betsol/ng-intl-tel-input.git"
+  },
+  "keywords": [
+    "betsol",
+    "angular",
+    "angular.js",
+    "intl-tel-input",
+    "phone-number",
+    "telephone-number",
+    "input",
+    "forms",
+    "form",
+    "ng-model",
+    "ngModel",
+    "form-control"
+  ]
+}
