@@ -1,10 +1,10 @@
 {
   "name": "betsol-ng-intl-tel-input",
   "description": "intl-tel-input integration for Angular.js",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "homepage": "https://github.com/betsol/ng-intl-tel-input",
   "license": "MIT",
-  "main": "dist/betsol-ng-intl-tel-input.js",
+  "main": "index.js",
   "dependencies": {
     "intl-tel-input": "^7.1.1"
   },

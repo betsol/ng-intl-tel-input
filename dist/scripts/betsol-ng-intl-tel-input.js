@@ -29,8 +29,16 @@
           // Building options for this control.
           var options = angular.extend({}, $scope.intlTelInputOptions || {}, intlTelInputOptions);
 
-          // Initializing the control with plugin.
-          $element.intlTelInput(options);
+          // Initializing the control with the plugin.
+          $element
+            .intlTelInput(options)
+            .done(function () {
+              // Updating state of the model controller
+              // when plugin finally initializes.
+              updateModelValue();
+              modelCtrl.$validate();
+            })
+          ;
 
           // Rendering view when model changes.
           modelCtrl.$render = function () {
