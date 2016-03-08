@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html ng-app="betsol.intlTelInput.test">
+
+<head>
+    <title>E2E Tests</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/vendor/intl-tel-input/build/css/intlTelInput.css">
+    <style>
+        body {
+            padding: 40px;
+        }
+        .has-success input {
+            background-color: #DFD;
+        }
+        .has-error input {
+            background-color: #FDD;
+        }
+    </style>
+</head>
+
+<body ng-controller="TestController as vm" ng-init="vm.includeUrl = 'form.html'">
+
+    <div ng-include="vm.includeUrl"></div>
+
+    <hr>
+
+    <p>Entered Phone Number: «<strong>{{ vm.phoneNumber }}</strong>»</p>
+
+    <div>
+        <br>
+        <button
+            type="button"
+            ng-click="vm.phoneNumber = '+380441234567'"
+        >Set to: «+380441234567»</button>
+
+        <button
+            type="button"
+            ng-click="vm.phoneNumber = '+79051234567'"
+        >Set to: «+79051234567»</button>
+
+        <button
+            type="button"
+            ng-click="vm.phoneNumber = '+1234'"
+        >Set to: «+1234»</button>
+
+        <button
+            type="button"
+            ng-click="vm.includeUrl = null"
+        >Destroy Form</button>
+
+        <button
+            type="button"
+            ng-click="vm.includeUrl = 'form.html'"
+        >Create Form</button>
+
+        <button
+            type="button"
+            ng-click="vm.phoneNumberCtrl.setCountry('ru')"
+        >Change Country to Russia</button>
+
+    </div>
+
+
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/intl-tel-input/build/js/intlTelInput.js"></script>
+    <script src="/vendor/intl-tel-input/build/js/utils.js"></script>
+    <script src="/vendor/ng-intl-tel-input/scripts/betsol-ng-intl-tel-input.js"></script>
+    <script type="application/javascript">
+        (function (angular) {
+            'use strict';
+            angular
+                .module('betsol.intlTelInput.test', [
+                    'betsol.intlTelInput'
+                ])
+                .config(function (intlTelInputOptions) {
+                })
+                .controller('TestController', function ($scope) {
+                    var vm = this;
+                    $scope.$watch('vm.phoneNumber', function (newValue) {
+                        console.log('vm.phoneNumber is changed', newValue);
+                    });
+                    vm.phoneNumber = null;
+                    vm.phoneNumberCtrl = null;
+                })
+            ;
+        })(angular);
+    </script>
+
+    <script type="text/ng-template" id="form.html">
+        <form name="form">
+            <div
+                class="form-group"
+                ng-class="{
+                    'has-success' : form.phoneNumber.$valid,
+                    'has-error'   : form.phoneNumber.$invalid
+                }"
+            >
+                <label for="phone-number">Phone Number</label>
+                <input
+                    id="phone-number"
+                    name="phoneNumber"
+                    class="form-control"
+                    type="tel"
+                    ng-model="vm.phoneNumber"
+                    intl-tel-input
+                    intl-tel-input-controller="vm.phoneNumberCtrl"
+                >
+            </div>
+            <div class="form-group">
+                <label for="phone-number-plain">Plain Input</label>
+                <input
+                    id="phone-number-plain"
+                    class="form-control"
+                    type="text"
+                    ng-model="vm.phoneNumber"
+                >
+            </div>
+        </form>
+    </script>
+
+</body>
+
+</html>

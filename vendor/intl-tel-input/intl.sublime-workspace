@@ -1,0 +1,872 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"country",
+				"country-list"
+			],
+			[
+				"drop",
+				"dropdownContainer"
+			],
+			[
+				"k",
+				"k"
+			],
+			[
+				"sele",
+				"_selectFlag"
+			],
+			[
+				"geoIp",
+				"geoIpLookup"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"curs",
+				"cursorAtEnd"
+			],
+			[
+				"afte",
+				"afterEach	jasmine-afterEach"
+			],
+			[
+				"convert",
+				"convertToNational"
+			],
+			[
+				"flag",
+				"flagWidth"
+			],
+			[
+				"deferr",
+				"utilsScriptDeferred"
+			],
+			[
+				"defe",
+				"autoCountryDeferred"
+			],
+			[
+				"_ini",
+				"_setInitialState"
+			],
+			[
+				"defaul",
+				"defaultCountry"
+			],
+			[
+				"countryC",
+				"countryCodeAttr"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ext",
+				"extSuffix"
+			],
+			[
+				"preve",
+				"preventConversion"
+			],
+			[
+				"intlTel",
+				"intlTelInputUtils"
+			],
+			[
+				"selected",
+				"selectedCountryData"
+			],
+			[
+				"_hand",
+				"_handleInvalidKey"
+			],
+			[
+				"_get",
+				"_getNumeric"
+			],
+			[
+				"di",
+				"dialCode"
+			],
+			[
+				"_add",
+				"_addPotentialCountryCode"
+			],
+			[
+				"num",
+				"numericIsSame"
+			],
+			[
+				"numer",
+				"numericChange"
+			],
+			[
+				"pre",
+				"preventInvalidNumbers"
+			],
+			[
+				"ori",
+				"originalLeftChar"
+			],
+			[
+				"_getCur",
+				"_getCursorFromLeftChar"
+			],
+			[
+				"left",
+				"leftChar"
+			],
+			[
+				"new",
+				"newCursor"
+			],
+			[
+				"might",
+				"mightBePaste"
+			],
+			[
+				"_getD",
+				"_getDigitsOnRight"
+			],
+			[
+				"digits",
+				"digitsOnRight"
+			],
+			[
+				"prevent",
+				"preventDefault"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/js/intlTelInput.js.ejs",
+			"settings":
+			{
+				"buffer_size": 54851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "demo.html",
+			"settings":
+			{
+				"buffer_size": 1432,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/css/intlTelInput.scss",
+			"settings":
+			{
+				"buffer_size": 8639,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jack/workspace/intl-tel-input",
+		"/Users/jack/workspace/intl-tel-input/build",
+		"/Users/jack/workspace/intl-tel-input/build/css",
+		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber",
+		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber/src",
+		"/Users/jack/workspace/intl-tel-input/src",
+		"/Users/jack/workspace/intl-tel-input/src/css",
+		"/Users/jack/workspace/intl-tel-input/src/js",
+		"/Users/jack/workspace/intl-tel-input/src/spec",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options"
+	],
+	"file_history":
+	[
+		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber/src/utils.js",
+		"/Users/jack/workspace/intl-tel-input/src/js/data.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/helpers/helpers.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/autoFormat.js",
+		"/Users/jack/workspace/intl-tel-input/demo.html",
+		"/Users/jack/workspace/intl-tel-input/Gruntfile.js",
+		"/Users/jack/workspace/intl-tel-input/npm-debug.log",
+		"/Users/jack/workspace/intl-tel-input/package.json",
+		"/Users/jack/workspace/intl-tel-input/bower.json",
+		"/Users/jack/workspace/intl-tel-input/src/js/intlTelInput.js.ejs",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/destroy.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/allowExtensions.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/jasmine.js",
+		"/Users/jack/workspace/intl-tel-input/src/css/intlTelInput.scss",
+		"/Users/jack/workspace/intl-tel-input/examples/js/countrySync.js",
+		"/Users/jack/workspace/intl-tel-input/examples/js/isValidNumber.js",
+		"/Users/jack/workspace/intl-tel-input/README.md",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/autoHideDialCode.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/vanilla/core.js",
+		"/Users/jack/workspace/intl-tel-input/examples/js/defaultCountryIp.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/template.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/isValidNumber.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/selectCountry.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/nationalMode.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/replace.js",
+		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/User/JsFormat.sublime-settings",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/defaultCountry.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/watch.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/responsive_images.js",
+		"/Users/jack/workspace/intl-tel-input/build/js/intlTelInput.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/retinafy.js",
+		"/Users/jack/workspace/intl-tel-input/.gitmodules",
+		"/Users/jack/workspace/intl-tel-input/component.json",
+		"/Users/jack/workspace/intl-tel-input/grunt/uglify.js",
+		"/Users/jack/workspace/intl-tel-input/tmp/versioned.js",
+		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber/build/utils.js",
+		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/User/SassBeautify.sublime-settings",
+		"/Users/jack/workspace/intl-tel-input/src/js/intlTelInput.js",
+		"/Users/jack/workspace/libphonenumber/libphonenumber/javascript/i18n/phonenumbers/demo.js",
+		"/Users/jack/workspace/libphonenumber/libphonenumber/javascript/i18n/phonenumbers/demo-compiled.js",
+		"/Users/jack/workspace/intl-tel-input/build/js/intlTelInput.min.js",
+		"/Users/jack/workspace/intl-tel-input/examples/partials/hiddenInput.html",
+		"/Users/jack/workspace/intl-tel-input/examples/js/hiddenInput.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/tmpl/sprite-retina-mustache.scss",
+		"/Users/jack/workspace/intl-tel-input/src/css/sprite.scss",
+		"/Users/jack/workspace/intl-tel-input/src/img/flags/AD.png",
+		"/Users/jack/workspace/intl-tel-input/build/css/intlTelInput.css",
+		"/Users/jack/workspace/intl-tel-input/grunt/bump.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/jquery/src/css/defaultDisplay.js",
+		"/Users/jack/workspace/intl-tel-input/bower_components/jquery/src/css/defaultDisplay.js",
+		"/Users/jack/workspace/intl-tel-input/examples/gen/default-country-ip.html",
+		"/Users/jack/workspace/intl-tel-input/bower_components/jquery/src/deferred.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/sprite.js",
+		"/Users/jack/workspace/intl-tel-input/src/css/flags.scss",
+		"/Users/jack/workspace/intl-tel-input/.gitignore",
+		"/Users/jack/workspace/intl-tel-input/grunt/shell.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/lib/core/resolvers/GitResolver.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/inquirer/node_modules/cli-color/bin/generate-color-images",
+		"/Users/jack/workspace/intl-tel-input/intl-tel-input.jquery.json",
+		"/Users/jack/workspace/intl-tel-input/examples/gen/is-valid-number.html",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/handlebars/dist/amd/handlebars/compiler/ast.js",
+		"/Users/jack/workspace/intl-tel-input/bower_components/flag-icon-css/less/flag-icon-list.less",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/getCountryData.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt/node_modules/getobject/lib/getobject.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/Gruntfile-execArgv.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/responsiveDropdown.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/svg_sprite.js",
+		"/Users/jack/workspace/intl-tel-input/grunt/svg2png.js",
+		"/Users/jack/workspace/intl-tel-input/bower_components/jquery/src/ajax/script.js",
+		"/Users/jack/workspace/intl-tel-input/bower_components/jasmine/src/console/requireConsole.js",
+		"/Users/jack/workspace/intl-tel-input/bower_components/jasmine/src/core/SpyRegistry.js",
+		"/Users/jack/workspace/intl-tel-input/spec.html",
+		"/Users/jack/workspace/intl-tel-input/examples/js/nationalMode.js",
+		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/jack/workspace/intl-tel-input/examples/partials/isValidNumber.html",
+		"/Users/jack/workspace/intl-tel-input/examples/css/isValidNumber.css",
+		"/Users/jack/workspace/intl-tel-input/node_modules/load-grunt-config/node_modules/lodash-node/compat/objects/isString.js",
+		"/Users/jack/workspace/intl-tel-input/examples/js/invalidKey.js",
+		"/Users/jack/workspace/intl-tel-input/examples/gen/invalid-key.html",
+		"/Users/jack/workspace/intl-tel-input/examples/css/invalidKey.css",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/insight/node_modules/inquirer/node_modules/rx/src/core/linq/observable/takelastbuffer.js",
+		"/Users/jack/workspace/intl-tel-input/intl.sublime-project",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/onlyCountries.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/vanilla/keyboardShortcuts.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/vanilla/multipleInstances.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/load-grunt-config/test/fixtures/output/multiconfig.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/archy/examples/multi_line.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/mout/number/MAX_UINT.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/ejs/Makefile",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/inquirer/node_modules/cli-color/node_modules/es5-ext/array/valid-array.js",
+		"/Users/jack/workspace/intl-tel-input/bower_components/jasmine/src/version.js",
+		"/Users/jack/workspace/intl-tel-input/examples/js/onlyCountriesEurope.js",
+		"/Users/jack/workspace/intl-tel-input/examples/gen/only-countries-europe.html",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/insight/node_modules/.bin/os-name",
+		"/Users/jack/workspace/intl-tel-input/tmp/one.min.js",
+		"/Users/jack/workspace/intl-tel-input/examples/partials/nationalMode.html",
+		"/Users/jack/workspace/intl-tel-input/examples/gen/national-mode.html",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-contrib-jshint/node_modules/jshint/data/non-ascii-identifier-start.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-contrib-jasmine/AUTHORS",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/setCountryData.js",
+		"/Users/jack/workspace/intl-tel-input/bower_components/jasmine/setup.py",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-contrib-sass/docs/sass-examples.md",
+		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jack/workspace/intl-tel-input/grunt/jshint.js",
+		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-bower-task/node_modules/bower/node_modules/decompress-zip/download-test-assets.js",
+		"/Users/jack/workspace/goulash/gulpfile.js",
+		"/Users/jack/workspace/goulash/Gemfile",
+		"/Users/jack/workspace/goulash/grunt/shipit.js",
+		"/Users/jack/workspace/goulash/server.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/jack/workspace/intl-tel-input/src/spec",
+			"/Users/jack/workspace/intl-tel-input/src",
+			"/Users/jack/workspace/intl-tel-input/src/spec",
+			"/Users/jack/workspace/intl-tel-input",
+			"/Users/jack/workspace/intl-tel-input/src/spec"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mobile",
+			"select ",
+			"select",
+			"scroll",
+			"ismobile",
+			"mobile",
+			"isMobile",
+			"numberType",
+			"dropdownContainer",
+			".dropdownContainer",
+			".dropdownContainer)",
+			"dropdownContainer)",
+			"dropdownContainer",
+			"placeholderChar",
+			"getKeyEvent",
+			"numberType",
+			"numbertype",
+			"placeholder",
+			"intlTelInputUtils",
+			"jasmine",
+			"dialcode",
+			"_initFocusListeners",
+			"blur\"",
+			"blur",
+			"\"change\"",
+			"autoFormat",
+			"\"change\"",
+			"invalid",
+			"south g",
+			"pitcairn",
+			"pitcairne",
+			"kosovo",
+			"setNumber",
+			"format",
+			"format,",
+			"_updateVal",
+			"setnumber",
+			"setNumber",
+			"_selectFlag",
+			"if (activeListItem.length) {",
+			"_getCursorFromLeftChar",
+			"_processAllCountries",
+			"_processCountries",
+			"_setPreferredCountries",
+			"_addCountryCode",
+			"_setPreferredCountries",
+			"_buildCountryArray",
+			"_processCountries",
+			"utilsRequestComplete",
+			"geoIpLookupComplete",
+			"loadUtils",
+			"_updateDialCode",
+			"_getCountryData",
+			"_updateVal",
+			"_getDigitsOnRight",
+			"_getCursorFromDigitsOnRight",
+			"_getCursorFromLeftChar",
+			"_handleInputKey",
+			"_appendListItems",
+			"_processCountries",
+			"_addCountryCode",
+			"selectedCountryData",
+			"selectedfl",
+			"DialCode",
+			"dialCode",
+			"_getCountryData",
+			"defaultCountry",
+			"defaultCountryData",
+			"getcountryda",
+			"defaultCountryData",
+			"_selectFlag",
+			"_updateFlagFromNumber",
+			"updateFlagFromNumber",
+			"_selectFlag",
+			"setinit",
+			".flag\"",
+			".flag",
+			"li",
+			".country",
+			".country-li",
+			".country\"",
+			".country",
+			"arrow",
+			".arrow",
+			"arrow",
+			"_handleInputKey",
+			"paste",
+			"dropdownContainer",
+			"ZERO",
+			"DOWN",
+			"_ensurePlus",
+			"_loadAutoCountry",
+			"processCountries",
+			"_isUnknownNanp",
+			"utilsScript",
+			"loadutils",
+			".loadUtils",
+			"$.fn[pluginName]",
+			"loadUtils",
+			"defaultCountry",
+			"defaultcountry",
+			"setcountry",
+			"selectcountry",
+			"processCountries",
+			"_ready",
+			"defaultCountry",
+			"selectCountry",
+			"selectcountry",
+			"defaultCountry",
+			"defaultcountry",
+			"== ",
+			"===",
+			"options.defaultCountryData",
+			"defaultxCountryData",
+			"defaultcountry",
+			"defaultCountry",
+			"defaultCountryData",
+			"charAt(0) == \"+\"",
+			"autoCountry",
+			".defaultCountryData",
+			"defaultCountryData",
+			"options.defaultCountry",
+			"options.defaultCountryData",
+			"defaultCountryData",
+			"defaultCountry",
+			"_selectFlag",
+			"_setInitialState",
+			"setinit"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/js/intlTelInput.js.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2060,
+								2060
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 902.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "demo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/css/intlTelInput.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8639,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6684,
+								6684
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/js/intlTelInput.js.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43266,
+								43266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 18121.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "intl.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"demo",
+				"demo.html"
+			],
+			[
+				"intltel",
+				"src/js/intlTelInput.js.ejs"
+			],
+			[
+				"data",
+				"src/js/data.js"
+			],
+			[
+				"utils",
+				"lib/libphonenumber/src/utils.js"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"jasmine",
+				"grunt/jasmine.js"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"aut",
+				"src/spec/tests/options/autoHideDialCode.js"
+			],
+			[
+				"autof",
+				"src/spec/tests/options/autoFormat.js"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"gruntfi",
+				"Gruntfile.js"
+			],
+			[
+				"srcintl",
+				"src/js/intlTelInput.js.ejs"
+			],
+			[
+				"libphone",
+				"lib/libphonenumber/src/utils.js"
+			],
+			[
+				"intljs",
+				"src/js/intlTelInput.js"
+			],
+			[
+				"gruntf",
+				"Gruntfile.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"default",
+				"src/spec/tests/options/defaultCountry.js"
+			],
+			[
+				"gitign",
+				".gitignore"
+			],
+			[
+				"fla",
+				"src/css/flags.scss"
+			],
+			[
+				"getcou",
+				"src/spec/tests/methods/getCountryData.js"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"intlcss",
+				"src/css/intlTelInput.scss"
+			],
+			[
+				"isvalid",
+				"src/spec/tests/methods/isValidNumber.js"
+			],
+			[
+				"int",
+				"src/js/intlTelInput.js"
+			],
+			[
+				"multipl",
+				"src/spec/tests/vanilla/multipleInstances.js"
+			],
+			[
+				"keyboard",
+				"src/spec/tests/vanilla/keyboardShortcuts.js"
+			],
+			[
+				"vanilla",
+				"src/spec/tests/vanilla/core.js"
+			],
+			[
+				"onlycountr",
+				"src/spec/tests/options/onlyCountries.js"
+			],
+			[
+				"nationalmode",
+				"src/spec/tests/options/nationalMode.js"
+			],
+			[
+				"autohide",
+				"src/spec/tests/options/autoHideDialCode.js"
+			],
+			[
+				"autofor",
+				"src/spec/tests/options/autoFormat.js"
+			],
+			[
+				"destroy",
+				"src/spec/tests/methods/destroy.js"
+			],
+			[
+				"watch",
+				"grunt/watch.js"
+			],
+			[
+				"autoform",
+				"src/spec/tests/options/autoFormat.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
