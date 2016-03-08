@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" type="text/css" href=".grunt/grunt-contrib-jasmine/jasmine.css">
 
-  <link rel="stylesheet" type="text/css" href="build/css/intlTelInput.css">
-
 
 </head>
 <body>
@@ -24,9 +22,9 @@
   
   <script src=".grunt/grunt-contrib-jasmine/boot.js"></script>
   
-  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="lib/jquery/jquery.js"></script>
   
-  <script src="node_modules/jasmine-jquery/lib/jasmine-jquery.js"></script>
+  <script src="lib/jasmine-jquery/jasmine-jquery.js"></script>
   
   <script src="src/spec/helpers/helpers.js"></script>
   
@@ -34,71 +32,41 @@
   
   <script src="build/js/intlTelInput.min.js"></script>
   
-  <script src="build/js/utils.js"></script>
-  
-  <script src="src/spec/tests/core/countrychangeEvent.js"></script>
-  
-  <script src="src/spec/tests/core/dropdownShortcuts.js"></script>
-  
-  <script src="src/spec/tests/core/initialValues.js"></script>
-  
-  <script src="src/spec/tests/core/multipleInstances.js"></script>
-  
-  <script src="src/spec/tests/core/usingDropdown.js"></script>
-  
-  <script src="src/spec/tests/core/usingInput.js"></script>
+  <script src="lib/libphonenumber/build/utils.js"></script>
   
   <script src="src/spec/tests/methods/destroy.js"></script>
   
-  <script src="src/spec/tests/methods/getExtension.js"></script>
-  
-  <script src="src/spec/tests/methods/getNumber.js"></script>
-  
-  <script src="src/spec/tests/methods/getNumberType.js"></script>
+  <script src="src/spec/tests/methods/getCountryData.js"></script>
   
   <script src="src/spec/tests/methods/getSelectedCountryData.js"></script>
   
-  <script src="src/spec/tests/methods/getValidationError.js"></script>
-  
   <script src="src/spec/tests/methods/isValidNumber.js"></script>
   
-  <script src="src/spec/tests/methods/setCountry.js"></script>
+  <script src="src/spec/tests/methods/selectCountry.js"></script>
   
   <script src="src/spec/tests/methods/setNumber.js"></script>
   
-  <script src="src/spec/tests/options/allowDropdown.js"></script>
+  <script src="src/spec/tests/options/allowExtensions.js"></script>
+  
+  <script src="src/spec/tests/options/autoFormat.js"></script>
   
   <script src="src/spec/tests/options/autoHideDialCode.js"></script>
   
-  <script src="src/spec/tests/options/autoPlaceholder.js"></script>
-  
-  <script src="src/spec/tests/options/customPlaceholder.js"></script>
-  
-  <script src="src/spec/tests/options/dropdownContainer.js"></script>
-  
-  <script src="src/spec/tests/options/excludeCountries.js"></script>
-  
-  <script src="src/spec/tests/options/formatOnInit.js"></script>
-  
-  <script src="src/spec/tests/options/geoIpLookup.js"></script>
-  
-  <script src="src/spec/tests/options/initialCountry.js"></script>
+  <script src="src/spec/tests/options/defaultCountry.js"></script>
   
   <script src="src/spec/tests/options/nationalMode.js"></script>
-  
-  <script src="src/spec/tests/options/numberType.js"></script>
   
   <script src="src/spec/tests/options/onlyCountries.js"></script>
   
   <script src="src/spec/tests/options/preferredCountries.js"></script>
   
-  <script src="src/spec/tests/options/separateDialCode.js"></script>
-  
   <script src="src/spec/tests/options/utilsScript.js"></script>
   
-  <script src="src/spec/tests/static/getCountryData.js"></script>
+  <script src="src/spec/tests/vanilla/core.js"></script>
   
-  <script src="src/spec/tests/static/loadUtils.js"></script>
+  <script src="src/spec/tests/vanilla/keyboardShortcuts.js"></script>
+  
+  <script src="src/spec/tests/vanilla/multipleInstances.js"></script>
   
   <script src=".grunt/grunt-contrib-jasmine/reporter.js"></script>
   

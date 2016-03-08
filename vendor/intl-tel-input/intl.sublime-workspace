@@ -4,14 +4,6 @@
 		"selected_items":
 		[
 			[
-				"country",
-				"country-list"
-			],
-			[
-				"drop",
-				"dropdownContainer"
-			],
-			[
 				"k",
 				"k"
 			],
@@ -100,6 +92,10 @@
 				"_addPotentialCountryCode"
 			],
 			[
+				"country",
+				"countryCode"
+			],
+			[
 				"num",
 				"numericIsSame"
 			],
@@ -151,15 +147,31 @@
 			"file": "src/js/intlTelInput.js.ejs",
 			"settings":
 			{
-				"buffer_size": 54851,
+				"buffer_size": 55738,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "demo.html",
+			"file": "src/spec/tests/methods/destroy.js",
 			"settings":
 			{
-				"buffer_size": 1432,
+				"buffer_size": 1740,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/spec/tests/options/allowExtensions.js",
+			"settings":
+			{
+				"buffer_size": 1421,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "grunt/jasmine.js",
+			"settings":
+			{
+				"buffer_size": 469,
 				"line_ending": "Unix"
 			}
 		},
@@ -167,7 +179,23 @@
 			"file": "src/css/intlTelInput.scss",
 			"settings":
 			{
-				"buffer_size": 8639,
+				"buffer_size": 8295,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "demo.html",
+			"settings":
+			{
+				"buffer_size": 1436,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/libphonenumber/src/utils.js",
+			"settings":
+			{
+				"buffer_size": 10055,
 				"line_ending": "Unix"
 			}
 		}
@@ -218,54 +246,50 @@
 	"expanded_folders":
 	[
 		"/Users/jack/workspace/intl-tel-input",
-		"/Users/jack/workspace/intl-tel-input/build",
-		"/Users/jack/workspace/intl-tel-input/build/css",
-		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber",
-		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber/src",
+		"/Users/jack/workspace/intl-tel-input/examples/js",
+		"/Users/jack/workspace/intl-tel-input/grunt",
 		"/Users/jack/workspace/intl-tel-input/src",
-		"/Users/jack/workspace/intl-tel-input/src/css",
 		"/Users/jack/workspace/intl-tel-input/src/js",
 		"/Users/jack/workspace/intl-tel-input/src/spec",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options"
 	],
 	"file_history":
 	[
-		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber/src/utils.js",
-		"/Users/jack/workspace/intl-tel-input/src/js/data.js",
-		"/Users/jack/workspace/intl-tel-input/src/spec/helpers/helpers.js",
-		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/autoFormat.js",
-		"/Users/jack/workspace/intl-tel-input/demo.html",
-		"/Users/jack/workspace/intl-tel-input/Gruntfile.js",
-		"/Users/jack/workspace/intl-tel-input/npm-debug.log",
-		"/Users/jack/workspace/intl-tel-input/package.json",
-		"/Users/jack/workspace/intl-tel-input/bower.json",
-		"/Users/jack/workspace/intl-tel-input/src/js/intlTelInput.js.ejs",
-		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/destroy.js",
-		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/allowExtensions.js",
-		"/Users/jack/workspace/intl-tel-input/grunt/jasmine.js",
-		"/Users/jack/workspace/intl-tel-input/src/css/intlTelInput.scss",
 		"/Users/jack/workspace/intl-tel-input/examples/js/countrySync.js",
 		"/Users/jack/workspace/intl-tel-input/examples/js/isValidNumber.js",
 		"/Users/jack/workspace/intl-tel-input/README.md",
+		"/Users/jack/workspace/intl-tel-input/src/js/intlTelInput.js.ejs",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/autoHideDialCode.js",
+		"/Users/jack/workspace/intl-tel-input/src/js/data.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/allowExtensions.js",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/vanilla/core.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/helpers/helpers.js",
 		"/Users/jack/workspace/intl-tel-input/examples/js/defaultCountryIp.js",
 		"/Users/jack/workspace/intl-tel-input/grunt/template.js",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/autoFormat.js",
+		"/Users/jack/workspace/intl-tel-input/Gruntfile.js",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/isValidNumber.js",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/selectCountry.js",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/nationalMode.js",
 		"/Users/jack/workspace/intl-tel-input/grunt/replace.js",
 		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/User/JsFormat.sublime-settings",
+		"/Users/jack/workspace/intl-tel-input/grunt/jasmine.js",
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/options/defaultCountry.js",
 		"/Users/jack/workspace/intl-tel-input/grunt/watch.js",
+		"/Users/jack/workspace/intl-tel-input/src/css/intlTelInput.scss",
+		"/Users/jack/workspace/intl-tel-input/package.json",
 		"/Users/jack/workspace/intl-tel-input/grunt/responsive_images.js",
 		"/Users/jack/workspace/intl-tel-input/build/js/intlTelInput.js",
+		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber/src/utils.js",
 		"/Users/jack/workspace/intl-tel-input/grunt/retinafy.js",
+		"/Users/jack/workspace/intl-tel-input/bower.json",
 		"/Users/jack/workspace/intl-tel-input/.gitmodules",
 		"/Users/jack/workspace/intl-tel-input/component.json",
 		"/Users/jack/workspace/intl-tel-input/grunt/uglify.js",
 		"/Users/jack/workspace/intl-tel-input/tmp/versioned.js",
+		"/Users/jack/workspace/intl-tel-input/demo.html",
 		"/Users/jack/workspace/intl-tel-input/lib/libphonenumber/build/utils.js",
 		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/User/SassBeautify.sublime-settings",
 		"/Users/jack/workspace/intl-tel-input/src/js/intlTelInput.js",
@@ -333,6 +357,7 @@
 		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/setCountryData.js",
 		"/Users/jack/workspace/intl-tel-input/bower_components/jasmine/setup.py",
 		"/Users/jack/workspace/intl-tel-input/node_modules/grunt-contrib-sass/docs/sass-examples.md",
+		"/Users/jack/workspace/intl-tel-input/src/spec/tests/methods/destroy.js",
 		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/jack/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/jack/workspace/intl-tel-input/grunt/jshint.js",
@@ -363,27 +388,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"mobile",
-			"select ",
-			"select",
-			"scroll",
-			"ismobile",
-			"mobile",
-			"isMobile",
-			"numberType",
-			"dropdownContainer",
-			".dropdownContainer",
-			".dropdownContainer)",
-			"dropdownContainer)",
-			"dropdownContainer",
-			"placeholderChar",
-			"getKeyEvent",
-			"numberType",
-			"numbertype",
-			"placeholder",
-			"intlTelInputUtils",
-			"jasmine",
-			"dialcode",
 			"_initFocusListeners",
 			"blur\"",
 			"blur",
@@ -490,7 +494,28 @@
 			"defaultCountry",
 			"_selectFlag",
 			"_setInitialState",
-			"setinit"
+			"setinit",
+			"complete",
+			"defaultCountryData",
+			"_setInitialState",
+			"_updateDialCode",
+			"_selectFlag",
+			"_updateFlagFromNumber",
+			"updateDefault",
+			"_selectFlag",
+			"defaultCountryData",
+			"complete",
+			"'auto'",
+			"\"auto\"",
+			"\"auto",
+			"defaultCountry",
+			"defaultCountry.",
+			"defaultCountry ",
+			"defaultCountry",
+			".defaultCountry",
+			"options.defaultCountry",
+			"_updateFlagFromNumber",
+			"_selectFlag"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -508,7 +533,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -517,15 +542,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 54851,
+						"buffer_size": 55738,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2060,
-								2060
+								12039,
+								12058
 							]
 						],
 						"settings":
@@ -535,32 +560,91 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 902.0,
+						"translation.y": 4848.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "demo.html",
+					"file": "src/spec/tests/methods/destroy.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1432,
+						"buffer_size": 1740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								78,
-								78
+								790,
+								790
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 226.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/spec/tests/options/allowExtensions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								460,
+								460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 126.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "grunt/jasmine.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -568,24 +652,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "src/css/intlTelInput.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8639,
+						"buffer_size": 8295,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6684,
-								6684
+								1996,
+								1996
 							]
 						],
 						"settings":
@@ -598,30 +682,55 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 0,
-					"file": "src/js/intlTelInput.js.ejs",
+					"buffer": 5,
+					"file": "demo.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 54851,
+						"buffer_size": 1436,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								43266,
-								43266
+								1175,
+								1175
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "lib/libphonenumber/src/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5166,
+								5166
 							]
 						],
 						"settings":
@@ -631,10 +740,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 18121.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -657,18 +766,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -696,26 +798,6 @@
 		"selected_items":
 		[
 			[
-				"demo",
-				"demo.html"
-			],
-			[
-				"intltel",
-				"src/js/intlTelInput.js.ejs"
-			],
-			[
-				"data",
-				"src/js/data.js"
-			],
-			[
-				"utils",
-				"lib/libphonenumber/src/utils.js"
-			],
-			[
-				"grunt",
-				"Gruntfile.js"
-			],
-			[
 				"jasmine",
 				"grunt/jasmine.js"
 			],
@@ -724,8 +806,16 @@
 				"README.md"
 			],
 			[
+				"data",
+				"src/js/data.js"
+			],
+			[
 				"aut",
 				"src/spec/tests/options/autoHideDialCode.js"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
 			],
 			[
 				"autof",
@@ -750,6 +840,10 @@
 			[
 				"libphone",
 				"lib/libphonenumber/src/utils.js"
+			],
+			[
+				"demo",
+				"demo.html"
 			],
 			[
 				"intljs",
@@ -794,6 +888,10 @@
 			[
 				"int",
 				"src/js/intlTelInput.js"
+			],
+			[
+				"intltel",
+				"build/js/intlTelInput.js"
 			],
 			[
 				"multipl",

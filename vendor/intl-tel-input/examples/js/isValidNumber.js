@@ -4,7 +4,7 @@ var telInput = $("#phone"),
 
 // initialise plugin
 telInput.intlTelInput({
-  utilsScript: "../../build/js/utils.js"
+  utilsScript: "../../lib/libphonenumber/build/utils.js"
 });
 
 var reset = function() {

@@ -1,6 +1,6 @@
 {
   "name": "intl-tel-input",
-  "version": "8.4.6",
+  "version": "7.1.1",
   "description": "A jQuery plugin for entering international telephone numbers",
   "keywords": [
     "international",
@@ -17,7 +17,7 @@
   ],
   "licenses": [{
     "type": "MIT",
-    "url": "https://raw.github.com/jackocnr/intl-tel-input/master/LICENSE"
+    "url": "https://raw.github.com/Bluefieldscom/intl-tel-input/master/LICENSE"
   }],
   "author": {
     "name": "Jack O'Connor",

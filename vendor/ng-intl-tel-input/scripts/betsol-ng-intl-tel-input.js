@@ -43,6 +43,10 @@
           // This is required for country change event right now.
           var renderingView = false;
 
+          // Using this flag in order to determine if we are in the process of changing the country.
+          // This is required for country change event right now.
+          var settingCountry = false;
+
           // Initializing the control with the plugin.
           callApi(options);
 
@@ -96,23 +100,30 @@
            * Using two event names for both latest and legacy versions of the plugin.
            */
           $element.bind('country-change countrychange', function () {
-            if (!renderingView) {
+            if (!renderingView && !settingCountry) {
               // It was changed by the user, so we need to update the model value.
-              $scope.$evalAsync(function () {
-                modelCtrl.$setViewValue('', 'countrychange');
-              });
+              updateViewValue('countrychange');
             }
           });
 
           $scope.intlTelInputController = {};
 
           $scope.intlTelInputController.setCountry = function (countryName) {
+            settingCountry = true;
             callApi('setCountry', countryName);
+            updateViewValue();
+            settingCountry = false;
           };
 
 
           function callApi () {
             return pluginApi.apply($element, arguments);
+          }
+
+          function updateViewValue (trigger) {
+            $scope.$evalAsync(function () {
+              modelCtrl.$setViewValue('', trigger);
+            });
           }
 
         }

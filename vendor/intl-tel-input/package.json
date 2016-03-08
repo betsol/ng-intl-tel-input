@@ -1,19 +1,15 @@
 {
   "_args": [
     [
-      "intl-tel-input@8.4.6",
+      "intl-tel-input@7.*",
       "/home/sfomin/ng-intl-tel-input"
     ]
   ],
-  "_from": "intl-tel-input@8.4.6",
-  "_id": "intl-tel-input@8.4.6",
+  "_from": "intl-tel-input@>=7.0.0 <8.0.0",
+  "_id": "intl-tel-input@7.1.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/intl-tel-input",
-  "_npmOperationalInternal": {
-    "host": "packages-13-west.internal.npmjs.com",
-    "tmp": "tmp/intl-tel-input-8.4.6.tgz_1457319823603_0.8297734167426825"
-  },
   "_npmUser": {
     "email": "jackocnr@gmail.com",
     "name": "jackocnr"
@@ -22,60 +18,57 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "intl-tel-input",
-    "raw": "intl-tel-input@8.4.6",
-    "rawSpec": "8.4.6",
+    "raw": "intl-tel-input@7.*",
+    "rawSpec": "7.*",
     "scope": null,
-    "spec": "8.4.6",
-    "type": "version"
+    "spec": ">=7.0.0 <8.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "#USER"
   ],
-  "_resolved": "http://registry.npmjs.org/intl-tel-input/-/intl-tel-input-8.4.6.tgz",
-  "_shasum": "cba03c936a7c4aef2df07f78c4839c06213d0c74",
+  "_resolved": "http://registry.npmjs.org/intl-tel-input/-/intl-tel-input-7.1.1.tgz",
+  "_shasum": "c3fa2f1e72d564ea32344351ff6a0d2a81c63619",
   "_shrinkwrap": null,
-  "_spec": "intl-tel-input@8.4.6",
+  "_spec": "intl-tel-input@7.*",
   "_where": "/home/sfomin/ng-intl-tel-input",
   "author": {
     "name": "Jack O'Connor",
     "url": "http://jackocnr.com"
   },
   "bugs": {
-    "url": "https://github.com/jackocnr/intl-tel-input/issues"
+    "url": "https://github.com/Bluefieldscom/intl-tel-input/issues"
   },
-  "dependencies": {
-    "jquery": ">=1.7"
-  },
+  "dependencies": {},
   "description": "A jQuery plugin for entering international telephone numbers",
   "devDependencies": {
     "ejs": "~1.0.0",
     "grunt": "~0.4.5",
+    "grunt-bower-task": "~0.4.0",
     "grunt-bump": "0.0.15",
-    "grunt-contrib-jasmine": "^1.0.0",
+    "grunt-contrib-jasmine": "^0.8.0",
     "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-sass": "~0.9.2",
+    "grunt-contrib-sass": "~0.8.1",
     "grunt-contrib-uglify": "~0.6.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
-    "grunt-replace": "^0.11.0",
+    "grunt-replace": "^0.8.0",
     "grunt-responsive-images": "^0.1.6",
     "grunt-retinafy": "^0.1.5",
     "grunt-shell": "^1.1.1",
     "grunt-spritesmith": "^4.1.0",
     "grunt-templater": "0.0.6",
-    "jasmine-jquery": "~2.0.2",
     "jquery": ">=1.7",
     "load-grunt-config": "~0.13.1",
-    "region-flags": "git://github.com/behdad/region-flags.git#gh-pages",
     "time-grunt": "~1.0.0"
   },
   "directories": {},
   "dist": {
-    "shasum": "cba03c936a7c4aef2df07f78c4839c06213d0c74",
-    "tarball": "http://registry.npmjs.org/intl-tel-input/-/intl-tel-input-8.4.6.tgz"
+    "shasum": "c3fa2f1e72d564ea32344351ff6a0d2a81c63619",
+    "tarball": "http://registry.npmjs.org/intl-tel-input/-/intl-tel-input-7.1.1.tgz"
   },
-  "gitHead": "d2523fa5cc9950e2744c9d9dddb42730ff0ae429",
-  "homepage": "https://github.com/jackocnr/intl-tel-input",
+  "gitHead": "cc028594f2f3c5fc95471ab8a61127df5805bc8f",
+  "homepage": "https://github.com/Bluefieldscom/intl-tel-input",
   "keywords": [
     "code",
     "country",
@@ -99,10 +92,10 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jackocnr/intl-tel-input.git"
+    "url": "git+https://github.com/Bluefieldscom/intl-tel-input.git"
   },
   "scripts": {
     "test": "grunt travis"
   },
-  "version": "8.4.6"
+  "version": "7.1.1"
 }

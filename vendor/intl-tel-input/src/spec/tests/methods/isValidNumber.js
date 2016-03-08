@@ -17,7 +17,10 @@ describe("isValidNumber:", function() {
   describe("init plugin and call public method isValidNumber", function() {
 
     beforeEach(function() {
-      input.intlTelInput();
+      input.intlTelInput({
+        // we must disable formatting to test with alpha chars
+        autoFormat: false,
+      });
     });
 
     it("returns true for: valid intl number", function() {
@@ -28,12 +31,6 @@ describe("isValidNumber:", function() {
     it("returns false for: invalid intl number", function() {
       input.intlTelInput("setNumber", "+44 7733 123");
       expect(input.intlTelInput("isValidNumber")).toBeFalsy();
-    });
-
-    it("returns null when utils script is not available", function() {
-      delete window.intlTelInputUtils;
-      input.intlTelInput("setNumber", "+44 7733 123456");
-      expect(input.intlTelInput("isValidNumber")).toBeNull();
     });
 
     /*it("returns false for: valid intl number containing alpha chars", function() {

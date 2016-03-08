@@ -1,14 +1,16 @@
 var input,
   totalCountries = 242,
   totalDialCodes = 227,
-  defaultPreferredCountries = 2,
   // don't call this "keys" as it will clash with the plugin
   keyCodes = {
     UP: 38,
     DOWN: 40,
     ENTER: 13,
     ESC: 27,
-    SPACE: 32
+    SPACE: 32,
+    BACKSPACE: 8,
+    DELETE: 46,
+    CTRL: 17
   };
 
 var intlSetup = function(utilsScript) {

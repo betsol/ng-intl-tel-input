@@ -2,12 +2,13 @@
 <html ng-app="betsol.intlTelInput.test">
 
 <head>
-    <title>E2E Tests</title>
+    <title>ng-intl-tel-input demo</title>
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/intl-tel-input/build/css/intlTelInput.css">
     <style>
         body {
             padding: 40px;
+            max-width: 700px;
         }
         .has-success input {
             background-color: #DFD;
@@ -15,56 +16,91 @@
         .has-error input {
             background-color: #FDD;
         }
+        .repo-button {
+            position: relative;
+            top: 10px;
+            float: right;
+        }
     </style>
 </head>
 
 <body ng-controller="TestController as vm" ng-init="vm.includeUrl = 'form.html'">
 
-    <div ng-include="vm.includeUrl"></div>
-
+    <h1>
+        ng-intl-tel-input demo
+        <iframe
+            class="repo-button"
+            src="https://ghbtns.com/github-btn.html?user=betsol&repo=ng-intl-tel-input&type=star&size=large"
+            frameborder="0"
+            scrolling="0"
+            width="90px"
+            height="30px"
+        ></iframe>
+    </h1>
     <hr>
+
+    <div ng-include="vm.includeUrl"></div>
 
     <p>Entered Phone Number: «<strong>{{ vm.phoneNumber }}</strong>»</p>
 
-    <div>
-        <br>
-        <button
-            type="button"
-            ng-click="vm.phoneNumber = '+380441234567'"
-        >Set to: «+380441234567»</button>
+    <hr>
 
-        <button
-            type="button"
-            ng-click="vm.phoneNumber = '+79051234567'"
-        >Set to: «+79051234567»</button>
+    <div class="well">
+        <div class="btn-group" role="group">
+            <button
+                type="button"
+                class="btn btn-default"
+                ng-click="vm.phoneNumber = '+380441234567'"
+            >Set to «+380441234567»</button>
 
-        <button
-            type="button"
-            ng-click="vm.phoneNumber = '+1234'"
-        >Set to: «+1234»</button>
+            <button
+                type="button"
+                class="btn btn-default"
+                ng-click="vm.phoneNumber = '+79051234567'"
+            >Set to «+79051234567»</button>
 
+            <button
+                type="button"
+                class="btn btn-default"
+                ng-click="vm.phoneNumber = '+1234'"
+            >Set to «+1234»</button>
+        </div>
+    </div>
+
+    <div class="well btn-group" role="group">
         <button
             type="button"
+            class="btn btn-default"
             ng-click="vm.includeUrl = null"
+            ng-disabled="null === vm.includeUrl"
         >Destroy Form</button>
 
         <button
             type="button"
+            class="btn btn-default"
             ng-click="vm.includeUrl = 'form.html'"
+            ng-disabled="null !== vm.includeUrl"
         >Create Form</button>
+    </div>
 
+    <div class="well btn-group" role="group">
         <button
             type="button"
+            class="btn btn-default"
             ng-click="vm.phoneNumberCtrl.setCountry('ru')"
         >Change Country to Russia</button>
-
     </div>
+
+    <hr>
+
+
 
 
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/angular/angular.js"></script>
     <script src="vendor/intl-tel-input/build/js/intlTelInput.js"></script>
     <script src="vendor/intl-tel-input/build/js/utils.js"></script>
+    <script src="vendor/intl-tel-input/lib/libphonenumber/build/utils.js"></script>
     <script src="vendor/ng-intl-tel-input/scripts/betsol-ng-intl-tel-input.js"></script>
     <script type="application/javascript">
         (function (angular) {
@@ -75,12 +111,9 @@
                 ])
                 .config(function (intlTelInputOptions) {
                 })
-                .controller('TestController', function ($scope) {
+                .controller('TestController', function () {
                     var vm = this;
-                    $scope.$watch('vm.phoneNumber', function (newValue) {
-                        console.log('vm.phoneNumber is changed', newValue);
-                    });
-                    vm.phoneNumber = null;
+                    vm.phoneNumber = '+79031234567';
                     vm.phoneNumberCtrl = null;
                 })
             ;

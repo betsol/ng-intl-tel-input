@@ -6,14 +6,10 @@ module.exports = function(grunt) {
 
           /***********
            * PRIVATE METHODS
-           * (special treatment for the _init method, which is a subset of other method names)
            ***********/
           {
-            match: /_init:/g,
-            replacement: '_a:'
-          }, {
-            match: /_init\(/g,
-            replacement: '_a('
+            match: /_init/g,
+            replacement: '_a'
           }, {
             match: /_processCountryData/g,
             replacement: '_b'
@@ -21,16 +17,13 @@ module.exports = function(grunt) {
             match: /_addCountryCode/g,
             replacement: '_c'
           }, {
-            match: /_filterCountries/g,
+            match: /_processCountries/g,
             replacement: '_c2'
           }, {
-            match: /_processAllCountries/g,
+            match: /_setInstanceCountryData/g,
             replacement: '_d'
           }, {
-            match: /_processCountryCodes/g,
-            replacement: '_d2'
-          }, {
-            match: /_processPreferredCountries/g,
+            match: /_setPreferredCountries/g,
             replacement: '_e'
           }, {
             match: /_generateMarkup/g,
@@ -45,9 +38,6 @@ module.exports = function(grunt) {
             match: /_initListeners/g,
             replacement: '_i'
           }, {
-            match: /_initDropdownListeners/g,
-            replacement: '_i1'
-          }, {
             match: /_initRequests/g,
             replacement: '_i2'
           }, {
@@ -57,14 +47,32 @@ module.exports = function(grunt) {
             match: /_initKeyListeners/g,
             replacement: '_j'
           }, {
-            match: /_cap/g,
+            match: /_ensurePlus/g,
             replacement: '_j2'
+          }, {
+            match: /_handleInvalidKey/g,
+            replacement: '_j3'
+          }, {
+            match: /_handleInputKey/g,
+            replacement: '_k'
+          }, {
+            match: /_getCursorFromLeftChar/g,
+            replacement: '_k1'
+          }, {
+            match: /_getCursorFromDigitsOnRight/g,
+            replacement: '_k2'
+          }, {
+            match: /_getDigitsOnRight/g,
+            replacement: '_k3'
           }, {
             match: /_initFocusListeners/g,
             replacement: '_l'
           }, {
             match: /_getNumeric/g,
             replacement: '_m'
+          }, {
+            match: /_getClean/g,
+            replacement: '_m2'
           }, {
             match: /_showDropdown/g,
             replacement: '_n'
@@ -87,7 +95,7 @@ module.exports = function(grunt) {
             match: /_startsWith/g,
             replacement: '_t'
           }, {
-            match: /_updateValFromNumber/g,
+            match: /_updateVal/g,
             replacement: '_u'
           }, {
             match: /_updateFlagFromNumber/g,
@@ -102,7 +110,7 @@ module.exports = function(grunt) {
             match: /_getCountryData/g,
             replacement: '_y'
           }, {
-            match: /_setFlag/g,
+            match: /_selectFlag/g,
             replacement: '_z'
           }, {
             match: /_updatePlaceholder/g,
@@ -122,12 +130,6 @@ module.exports = function(grunt) {
           }, {
             match: /_getDialCode/g,
             replacement: '_af'
-          }, {
-            match: /_getFullNumber/g,
-            replacement: '_ag'
-          }, {
-            match: /_beforeSetNumber/g,
-            replacement: '_ah'
           }
         ]
       },
@@ -163,34 +165,53 @@ module.exports = function(grunt) {
             match: /PLUS/g,
             replacement: 'f'
           }, {
+            match: /ZERO/g,
+            replacement: 'g'
+          }, {
+            match: /NINE/g,
+            replacement: 'h'
+          }, {
             match: /SPACE/g,
+            replacement: 'i'
+          }, {
+            match: /BSPACE/g,
             replacement: 'j'
           }, {
             match: /TAB/g,
             replacement: 'k'
+          }, {
+            match: /DEL/g,
+            replacement: 'l'
+          }, {
+            match: /CTRL/g,
+            replacement: 'm'
+          }, {
+            match: /CMD1/g,
+            replacement: 'n'
+          }, {
+            match: /CMD2/g,
+            replacement: 'o'
           },
 
-          // first occurence (hence no /g global flag), when they are defined in the defaults object (no "options." prefix to match)
+          // first occurence, when they are defined in the defaults object (no "options." prefix to match)
+          // (using meaningful letter substitutions here)
           {
-            match: /allowDropdown/,
+            match: /allowExtensions/,
             replacement: 'a'
           }, {
-            match: /autoHideDialCode/,
+            match: /autoFormat/,
             replacement: 'b'
           }, {
-            match: /autoPlaceholder/,
+            match: /autoHideDialCode/,
             replacement: 'c'
           }, {
-            match: /customPlaceholder/,
-            replacement: 'c2'
-          }, {
-            match: /dropdownContainer/,
+            match: /autoPlaceholder/,
             replacement: 'd'
           }, {
-            match: /excludeCountries/,
+            match: /dropdownContainer/,
             replacement: 'e'
           }, {
-            match: /formatOnInit/,
+            match: /excludeCountries/,
             replacement: 'f'
           }, {
             match: /geoIpLookup/,
@@ -211,35 +232,30 @@ module.exports = function(grunt) {
             match: /preferredCountries/,
             replacement: 'l'
           }, {
-            match: /separateDialCode/,
-            replacement: 'm'
-          }, {
             match: /utilsScript/,
-            replacement: 'n'
+            replacement: 'm'
           },
 
 
           // all other occurrences have the options prefix
+          // (using meaningful letter substitutions here)
           {
-            match: /options.allowDropdown/g,
+            match: /options.allowExtensions/g,
             replacement: 'options.a'
           }, {
-            match: /options.autoHideDialCode/g,
+            match: /options.autoFormat/g,
             replacement: 'options.b'
           }, {
-            match: /options.autoPlaceholder/g,
+            match: /options.autoHideDialCode/g,
             replacement: 'options.c'
           }, {
-            match: /options.customPlaceholder/g,
-            replacement: 'options.c2'
-          }, {
-            match: /options.dropdownContainer/g,
+            match: /options.autoPlaceholder/g,
             replacement: 'options.d'
           }, {
-            match: /options.excludeCountries/g,
+            match: /options.dropdownContainer/g,
             replacement: 'options.e'
           }, {
-            match: /options.formatOnInit/g,
+            match: /options.excludeCountries/g,
             replacement: 'options.f'
           }, {
             match: /options.geoIpLookup/g,
@@ -260,12 +276,9 @@ module.exports = function(grunt) {
             match: /options.preferredCountries/g,
             replacement: 'options.l'
           }, {
-            match: /options.separateDialCode/g,
-            replacement: 'options.m'
-          }, {
             match: /options.utilsScript/g,
-            replacement: 'options.n'
-          }
+            replacement: 'options.m'
+          },
 
         ]
       },
@@ -284,17 +297,23 @@ module.exports = function(grunt) {
            * FIELDS ON "this"
            ***********/
           {
-            match: /.telInput/g,
+            match: /.element/g,
             replacement: '.a'
           }, {
             match: /.options/g,
             replacement: '.b'
+          }, {
+            match: /._defaults/g,
+            replacement: '.c'
           }, {
             match: /.isGoodBrowser/g,
             replacement: '.d'
           }, {
             match: /.hadInitialPlaceholder/g,
             replacement: '.e'
+          }, {
+            match: /._name/g,
+            replacement: '.f'
           },
 
 
@@ -307,13 +326,13 @@ module.exports = function(grunt) {
           }, {
             match: /.utilsScriptDeferred/g,
             replacement: '.i'
-          }, {
-            match: /.defaultCountry/g,
-            replacement: '.j'
           },
 
 
           {
+            match: /.telInput/g,
+            replacement: '.j'
+          }, {
             match: /.flagsContainer/g,
             replacement: '.k'
           }, {
@@ -340,9 +359,6 @@ module.exports = function(grunt) {
           }, {
             match: /.selectedCountryData/g,
             replacement: '.s'
-          }, {
-            match: /.selectedDialCode/g,
-            replacement: '.t'
           }
 
         ]
@@ -361,23 +377,21 @@ module.exports = function(grunt) {
           // hack to normalise runtime option names
           // UPDATE: instead of replacing the runtime option names with a newly created object, we $.extend the existing object so that if we forget to add any new/modified option names in this build file, they will still work! The downside is that this options object will contain both the full key and the minified key, but that really doesn't matter.
           {
-            match: /this\.b=/g,
-            replacement: 'c&&(a.extend(c,c,{' +
-              'a:c.allowDropdown,' +
-              'b:c.autoHideDialCode,' +
-              'c:c.autoPlaceholder,' +
-              'c2:c.customPlaceholder,' +
-              'd:c.dropdownContainer,' +
-              'e:c.excludeCountries,' +
-              'f:c.formatOnInit,' +
+            match: /this.b=/g,
+            replacement: 'c&&(a.extend(c, c, {' +
+              'a:c.allowExtensions,' +
+              'b:c.autoFormat,' +
+              'c:c.autoHideDialCode,' +
+              'd:c.autoPlaceholder,' +
+              'e:c.dropdownContainer,' +
+              'f:c.excludeCountries,' +
               'g:c.geoIpLookup,' +
               'h:c.initialCountry,' +
               'i:c.nationalMode,' +
               'j:c.numberType,' +
               'k:c.onlyCountries,' +
               'l:c.preferredCountries,' +
-              'm:c.separateDialCode,' +
-              'n:c.utilsScript' +
+              'm:c.utilsScript' +
               '})),this.b='
           }
         ]

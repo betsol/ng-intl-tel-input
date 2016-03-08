@@ -1,6 +1,6 @@
 "use strict";
 
-describe("utilsScript:", function() {
+describe("utilsScript: init plugin to test utilsScript option", function() {
 
   beforeEach(function() {
     intlSetup();
@@ -11,30 +11,20 @@ describe("utilsScript:", function() {
   afterEach(function() {
     input.intlTelInput("destroy");
     input = null;
-    // here we must fake that the script has not yet been loaded
-    $.fn.intlTelInput.loadedUtilsScript = $.fn.intlTelInput.windowLoaded = false;
   });
 
-  it("init vanilla plugin does not load the script", function() {
+  it("by default, it does not load the script", function() {
     input.intlTelInput();
     expect($.ajax).not.toHaveBeenCalled();
   });
 
-  it("init plugin with utilsScript before window.load event does not load the script", function() {
+  it("setting utilsScript option does load the script", function() {
+    // here we must fake that the script has not yet been loaded
+    $.fn["intlTelInput"].injectedUtilsScript = false;
     input.intlTelInput({
-      utilsScript: "this/is/not/real.lol"
+      utilsScript: "lib/libphonenumber/build/utils.js"
     });
-    expect($.ajax).not.toHaveBeenCalled();
-  });
-
-  it("faking window.load then init plugin with utilsScript does load the script", function() {
-    var url = "build/js/utils.js";
-    $.fn.intlTelInput.windowLoaded = true;
-    input.intlTelInput({
-      utilsScript: url
-    });
-    expect($.ajax.calls.count()).toEqual(1);
-    expect($.ajax.calls.mostRecent().args[0].url).toEqual(url);
+    expect($.ajax).toHaveBeenCalled();
   });
 
 });

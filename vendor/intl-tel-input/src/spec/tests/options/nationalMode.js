@@ -8,7 +8,7 @@ describe("nationalMode:", function() {
   });
 
   afterEach(function() {
-    input.intlTelInput("destroy").remove();
+    input.intlTelInput("destroy");
     input = null;
   });
 
@@ -17,11 +17,16 @@ describe("nationalMode:", function() {
   describe("init plugin with no value", function() {
 
     beforeEach(function() {
-      // must be in DOM for focus to work
-      input = $("<input>").appendTo("body");
+      input = $("<input>");
       input.intlTelInput({
         nationalMode: true
       });
+      // must be in DOM for focus to work
+      getParentElement().appendTo($("body"));
+    });
+
+    afterEach(function() {
+      getParentElement().remove();
     });
 
     it("defaults to no dial code", function() {
