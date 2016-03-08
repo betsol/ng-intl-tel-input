@@ -13,6 +13,8 @@ for mode details, [features][intl-tel-input-features] and
 
 Both `7.x` and `8.x` versions of `intl-tel-input` are supported at this moment.
 
+> —» [DEMO][demo] «—
+
 
 ## Installation
 
@@ -202,7 +204,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-  [changelog]: changelog.md
+  [changelog]: CHANGELOG.md
   [so-ask]:    http://stackoverflow.com/questions/ask?tags=angularjs,javascript
   [email]:     mailto:s.fomin@betsol.ru
   [new-issue]: https://github.com/betsol/ng-intl-tel-input/issues/new
@@ -213,3 +215,4 @@ THE SOFTWARE.
   [intl-tel-input-features]: https://github.com/jackocnr/intl-tel-input#features
   [intl-tel-input-options]:  https://github.com/jackocnr/intl-tel-input#options
   [intl-tel-input-install]:  https://github.com/jackocnr/intl-tel-input#getting-started
+  [demo]:                    http://betsol.github.io/ng-intl-tel-input/
