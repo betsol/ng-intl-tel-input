@@ -1,5 +1,13 @@
 # betsol-ng-intl-tel-input changelog
 
+## Version 1.1.0
+(08 Mar 2016)
+
+- Module is completely refactored
+- Improved multiple version support of `intl-tel-input`
+- Added demo
+
+
 ## Version 1.0.0
 (13 Feb 2016)
 

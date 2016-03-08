@@ -11,6 +11,8 @@ describe('Module', function () {
   // TESTING //
   //=========//
 
+  // @todo: add tests!
+
   it('does nothing', function () {});
 
 });

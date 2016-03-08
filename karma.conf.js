@@ -4,8 +4,8 @@ module.exports = function (config) {
     frameworks: ['mocha', 'expect'],
     files: [
       // Third-party dependencies
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
 
       // Module files
       'dist/scripts/betsol-ng-intl-tel-input.js',

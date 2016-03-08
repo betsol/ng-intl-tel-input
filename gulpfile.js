@@ -19,6 +19,13 @@ var concat = require('gulp-concat');
 var header = require('gulp-header');
 var runSequence = require('run-sequence');
 var KarmaServer = require('karma').Server;
+var serverFactory = require('spa-server');
+var deploy = require('gulp-gh-pages');
+var ncp = require('ncp').ncp;
+
+const SCRIPT_PATH = './src/scripts/module.js';
+const DEPLOY_TEMP_PATH = './.deploy';
+const DEMO_PATH = './demo';
 
 
 //=========//
@@ -30,7 +37,7 @@ var KarmaServer = require('karma').Server;
 // CLEAN //
 //=======//
 
-gulp.task('clean', function (callback) {
+gulp.task('clean', function () {
   return del('dist');
 });
 
@@ -46,10 +53,9 @@ gulp.task('build', function (done) {
 
 gulp.task('build:scripts', function () {
   var headerContent = fs.readFileSync('src/scripts/header.js', 'utf8');
+
   return gulp
-    .src([
-      './src/scripts/module.js'
-    ])
+    .src(SCRIPT_PATH)
     .pipe(concat('betsol-ng-intl-tel-input.js'))
     .pipe(ngAnnotate({
       'single_quotes': true
@@ -64,6 +70,14 @@ gulp.task('build:scripts', function () {
   ;
 });
 
+gulp.task('build:scripts:watch', function () {
+  gulp.watch(SCRIPT_PATH, ['build:scripts']);
+});
+
+gulp.task('watch', ['build:scripts:watch']);
+
+gulp.task('start', ['demo:server', 'watch']);
+
 
 //======//
 // TEST //
@@ -77,6 +91,68 @@ gulp.task('test', function (done) {
 });
 
 
+//======//
+// DEMO //
+//======//
+
+gulp.task('demo:server', function () {
+  var server = serverFactory.create({
+    path: './demo',
+    port: 1337
+  });
+  server.start();
+});
+
+gulp.task('demo:deploy', function (done) {
+  runSequence(
+    'demo:deploy:before',
+    'demo:deploy:actual',
+    'demo:deploy:after',
+    done
+  );
+});
+
+gulp.task('demo:deploy:actual', function () {
+  console.log('Starting to deploy files...');
+  return gulp.src(DEPLOY_TEMP_PATH + '/**/*')
+    .pipe(deploy())
+  ;
+});
+
+gulp.task('demo:deploy:before', function (done) {
+
+  // Clearing temp directories and making a temp copy.
+  deployClearTemp()
+    .then(function () {
+        makeTempCopy(done);
+    })
+  ;
+
+
+  /**
+   * Makes a temporary copy of the demos directory with symlinks resolved.
+   *
+   * @param {function} callback
+   */
+  function makeTempCopy (callback) {
+    ncp(DEMO_PATH, DEPLOY_TEMP_PATH, {
+      dereference: true
+    }, function (error) {
+      if (error) {
+        return console.error(error);
+      }
+      console.log('Temporary copy created!');
+      callback();
+    });
+  }
+
+});
+
+gulp.task('demo:deploy:after', function () {
+  return deployClearTemp();
+});
+
+
 //==============//
 // DEFAULT TASK //
 //==============//
@@ -84,3 +160,11 @@ gulp.task('test', function (done) {
 gulp.task('default', function (done) {
   runSequence('build', 'test', done);
 });
+
+
+/**
+ * Clears temp directory.
+ */
+function deployClearTemp () {
+  return del([DEPLOY_TEMP_PATH, './.publish']);
+}

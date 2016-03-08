@@ -1,6 +1,6 @@
 /**
  * betsol-ng-intl-tel-input - intl-tel-input integration for Angular.js
- * @version v0.0.2
+ * @version v1.0.0
  * @link https://github.com/betsol/ng-intl-tel-input
  * @license MIT
  *
@@ -26,60 +26,104 @@
         },
         link: function link ($scope, $element, attrs, modelCtrl) {
 
+          /**
+           * Obtaining reference to the plugin API
+           * and making sure it's present.
+           */
+          var pluginApi = $element.intlTelInput;
+          if (!pluginApi) {
+            log('intl-tel-input jQuery plugin must be loaded, skipping directive initialization');
+            return;
+          }
+
           // Building options for this control.
           var options = angular.extend({}, $scope.intlTelInputOptions || {}, intlTelInputOptions);
 
-          // Initializing the control with the plugin.
-          $element
-            .intlTelInput(options)
-            .done(function () {
-              // Updating state of the model controller
-              // when plugin finally initializes.
-              updateModelValue();
-              modelCtrl.$validate();
-            })
-          ;
+          // Using this flag in order to determine if we are in the control's rendering phase or not.
+          // This is required for country change event right now.
+          var renderingView = false;
 
-          // Rendering view when model changes.
+          // Using this flag in order to determine if we are in the process of changing the country.
+          // This is required for country change event right now.
+          var settingCountry = false;
+
+          // Initializing the control with the plugin.
+          callApi(options);
+
+          /**
+           * Updating the control's view when model changes.
+           */
           modelCtrl.$render = function () {
-            if (modelCtrl.$viewValue) {
-              $element.intlTelInput('setNumber', modelCtrl.$modelValue);
-            }
+            renderingView = true;
+            callApi('setNumber', modelCtrl.$viewValue || '');
+            renderingView = false;
           };
 
-          // Setting correct model value when view is modified.
-          modelCtrl.$parsers.unshift(function () {
-            return getModelValue();
-          });
-
-          // Validating the input.
+          /**
+           * Validating the input using plugin's API.
+           */
           modelCtrl.$validators.phoneNumber = function (modelValue, viewValue) {
             if (!modelValue && !viewValue) {
               return true;
             }
-            return $element.intlTelInput('isValidNumber');
+            return callApi('isValidNumber');
           };
 
-          // Destroying the plugin with the directive.
+          /**
+           * Destroying the plugin with the directive.
+           */
           $scope.$on('$destroy', function () {
-            $element.intlTelInput('destroy');
+            callApi('destroy');
           });
 
-          if ('object' === typeof $scope.intlTelInputController) {
-            $scope.intlTelInputController.setCountry = function (countryName) {
-              $element.intlTelInput('setCountry', countryName);
-              updateModelValue();
-            };
+          /**
+           * The "$setViewValue" is called when control's value has changed. It's triggered by the DOM events.
+           * Angular adds all basic event listeners to the underlying input element by default,
+           * and will trigger this function for us providing the .val() value as a first argument.
+           *
+           * Wrapping the original function in order to get the proper telephone number from the plugin's API
+           * instead of the default .val() of the underlying input field.
+           */
+          var $setViewValue = modelCtrl.$setViewValue;
+          modelCtrl.$setViewValue = function () {
+            arguments[0] = callApi('getNumber');
+            $setViewValue.apply(modelCtrl, arguments);
+          };
+
+          /**
+           * Listening for changes of the country in order to update the model value.
+           *
+           * We are using "renderingView" flag in order to check if country has
+           * changed by the plugin itself during control's rendering phase or it
+           * was changed manually by the user.
+           *
+           * Using two event names for both latest and legacy versions of the plugin.
+           */
+          $element.bind('country-change countrychange', function () {
+            if (!renderingView && !settingCountry) {
+              // It was changed by the user, so we need to update the model value.
+              updateViewValue('countrychange');
+            }
+          });
+
+          $scope.intlTelInputController = {};
+
+          $scope.intlTelInputController.setCountry = function (countryName) {
+            settingCountry = true;
+            callApi('setCountry', countryName);
+            updateViewValue();
+            settingCountry = false;
+          };
+
+
+          function callApi () {
+            return pluginApi.apply($element, arguments);
           }
 
-          $element.bind('country-change', updateModelValue);
-
-          function getModelValue () {
-            return $element.intlTelInput('getNumber');
-          }
-
-          function updateModelValue () {
-            modelCtrl.$setViewValue(getModelValue());
+          function updateViewValue (trigger) {
+            $scope.$evalAsync(function () {
+              modelCtrl.$setViewValue('', trigger);
+            });
           }
 
         }
@@ -87,5 +131,10 @@
     }])
 
   ;
+
+
+  function log (message) {
+    console.log('ng-intl-tel-input: ' + message);
+  }
 
 })(angular);
