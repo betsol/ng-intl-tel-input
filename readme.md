@@ -1,7 +1,7 @@
 # betsol-ng-intl-tel-input
 
-[![Bower version](https://badge.fury.io/bo/betsol-ng-intl-tel-input.svg)](http://badge.fury.io/bo/betsol-ng-intl-tel-input)
 [![npm version](https://badge.fury.io/js/betsol-ng-intl-tel-input.svg)](http://badge.fury.io/js/betsol-ng-intl-tel-input)
+[![Bower version](https://badge.fury.io/bo/betsol-ng-intl-tel-input.svg)](http://badge.fury.io/bo/betsol-ng-intl-tel-input)
 
 
 This module for Angular.js provides integration
@@ -11,6 +11,8 @@ Please feel free to investigate [the original plugin][intl-tel-input]
 for mode details, [features][intl-tel-input-features] and
 [configuration][intl-tel-input-options].
 
+Both `7.x` and `8.x` versions of `intl-tel-input` are supported at this moment.
+
 
 ## Installation
 
@@ -18,7 +20,7 @@ for mode details, [features][intl-tel-input-features] and
 
 Please install the original plugin first. Use the [following guide][intl-tel-input-install].
 
-### Install integration library with `NPM` or `Bower`
+### Install integration library with `npm` or `Bower`
 
 - `npm i --save betsol-ng-intl-tel-input`
 
@@ -62,7 +64,7 @@ All configuration options could be found in the [original plugin documentation][
 
 ```javascript
 angular
-  .module('app', [])
+  .module('app', ['betsol.intlTelInput'])
   .config(function (intlTelInputOptions) {
     angular.extend(intlTelInputOptions, {
       nationalMode: false,
@@ -101,9 +103,9 @@ that will be populated with the directive's API functions.
 
 ```javascript
 angular
-  .module('app', [])
-  .controller(function ($scope) {
-    $scope.myIntlTelInputCtrl = {};
+  .module('app', ['betsol.intlTelInput'])
+  .controller('MyCtrl', function ($scope) {
+    $scope.myIntlTelInputCtrl;
     $scope.changeCountryToRussia = function () {
       $scope.myIntlTelInputCtrl.setCountry('ru');
     };
@@ -159,9 +161,11 @@ Fork, clone, create a feature branch, implement your feature, cover it with test
 
 Run:
 
-- `npm i && bower install` to initialize the project
+- `npm i` to initialize the project
 - `gulp build` to re-build the dist files
 - `gulp test` or `karma start` to test the code
+- `gulp start` to run demo server and watches
+- `gulp demo:deploy` to deploy the demo on GitHub Pages
 
 Do not add dist files to the PR itself.
 We will re-compile the module manually each time before releasing.
