@@ -2,7 +2,7 @@
   "name": "betsol-ng-intl-tel-input",
   "description": "intl-tel-input integration for Angular.js",
   "version": "1.1.0",
-  "main": "dist/betsol-ng-intl-tel-input.js",
+  "main": "dist/scripts/betsol-ng-intl-tel-input.js",
   "ignore": [
     "src",
     "test",
