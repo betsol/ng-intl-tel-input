@@ -158,7 +158,7 @@ gulp.task('demo:deploy:after', function () {
 //==============//
 
 gulp.task('default', function (done) {
-  runSequence('build', 'test', done);
+  runSequence('build', done);
 });
 
 
