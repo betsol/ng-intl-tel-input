@@ -12,7 +12,8 @@
     "package.json"
   ],
   "dependencies": {
-    "intl-tel-input": "^8.4.6"
+    "angular": "^1.2.29",
+    "intl-tel-input": "^7.1.1"
   },
   "repository": {
     "type": "git",

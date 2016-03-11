@@ -4,23 +4,17 @@
 [![Bower version](https://badge.fury.io/bo/betsol-ng-intl-tel-input.svg)](http://badge.fury.io/bo/betsol-ng-intl-tel-input)
 
 
-This module for Angular.js (`^1.2`) provides integration
-for the great [intl-tel-input][intl-tel-input] jQuery plugin.
+This module for Angular.js (`^1.2.29`) provides integration
+for the great [intl-tel-input][intl-tel-input] (`^7.1.1`) jQuery plugin.
 
 Please feel free to investigate [the original plugin][intl-tel-input]
 for mode details, [features][intl-tel-input-features] and
 [configuration][intl-tel-input-options].
 
-Both `7.x` and `8.x` versions of `intl-tel-input` are supported at this moment.
-
 > —» [DEMO][demo] «—
 
 
 ## Installation
-
-### Original plugin
-
-Please install the original plugin first. Use the [following guide][intl-tel-input-install].
 
 ### Install integration library with `npm` or `Bower`
 
@@ -30,6 +24,9 @@ Please install the original plugin first. Use the [following guide][intl-tel-inp
 
 
 ### Add integration library to your page
+
+Make sure, that module is added to your page either as a part of automatically built bundle
+or manually using the code like this:
 
 ``` html
 <script src="../betsol-ng-intl-tel-input/dist/betsol-ng-intl-tel-input.js"></script>
@@ -52,6 +49,15 @@ var application = angular.module('application', [
 To add the plugin to any input field please use the `intl-tel-input` directive:
 
 `<input type="tel" ng-model="user.phoneNumber" intl-tel-input>`
+
+
+### Original plugin
+
+This module depends on [intl-tel-input][intl-tel-input] plugin to operate.
+If you installed the module using *npm* or *Bower*, then the dependency will be installed automatically,
+and if your are using some automated build tool, it will probably be added to your bundle.
+
+In other cases make sure to install it manually using the [following guide][intl-tel-input-install].
 
 
 ## Configuration
