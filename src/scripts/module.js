@@ -13,8 +13,8 @@
         restrict: 'AC',
         require: 'ngModel',
         scope: {
-          intlTelInputOptions: '=',
-          intlTelInputController: '='
+          intlTelInputOptions: '=?',
+          intlTelInputController: '=?'
         },
         link: function link ($scope, $element, attrs, modelCtrl) {
 

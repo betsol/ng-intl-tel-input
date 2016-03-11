@@ -1,6 +1,6 @@
 /**
  * betsol-ng-intl-tel-input - intl-tel-input integration for Angular.js
- * @version v1.0.0
+ * @version v1.1.0
  * @link https://github.com/betsol/ng-intl-tel-input
  * @license MIT
  *
@@ -21,8 +21,8 @@
         restrict: 'AC',
         require: 'ngModel',
         scope: {
-          intlTelInputOptions: '=',
-          intlTelInputController: '='
+          intlTelInputOptions: '=?',
+          intlTelInputController: '=?'
         },
         link: function link ($scope, $element, attrs, modelCtrl) {
 
