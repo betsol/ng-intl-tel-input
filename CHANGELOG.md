@@ -1,5 +1,15 @@
 # betsol-ng-intl-tel-input changelog
 
+## Version 1.2.0
+(11 Mar 2016)
+
+- Fixed incorrect path to the distribution resources
+- Fixed an issue where directive options were strictly required
+- Added docs on how validator could be used
+- Added support for legacy versions of Angular.js: `^1.2.29`
+- Updated dependency definition and documentation
+
+
 ## Version 1.1.0
 (08 Mar 2016)
 
