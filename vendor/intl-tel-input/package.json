@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "intl-tel-input@7.*",
-      "/home/sfomin/ng-intl-tel-input"
+      "intl-tel-input@^7.1.1",
+      "/home/sfomin/projects/ng-intl-tel-input"
     ]
   ],
-  "_from": "intl-tel-input@>=7.0.0 <8.0.0",
+  "_from": "intl-tel-input@>=7.1.1 <8.0.0",
   "_id": "intl-tel-input@7.1.1",
   "_inCache": true,
   "_installable": true,
@@ -18,20 +18,20 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "intl-tel-input",
-    "raw": "intl-tel-input@7.*",
-    "rawSpec": "7.*",
+    "raw": "intl-tel-input@^7.1.1",
+    "rawSpec": "^7.1.1",
     "scope": null,
-    "spec": ">=7.0.0 <8.0.0",
+    "spec": ">=7.1.1 <8.0.0",
     "type": "range"
   },
   "_requiredBy": [
-    "#USER"
+    "/"
   ],
-  "_resolved": "http://registry.npmjs.org/intl-tel-input/-/intl-tel-input-7.1.1.tgz",
+  "_resolved": "https://registry.npmjs.org/intl-tel-input/-/intl-tel-input-7.1.1.tgz",
   "_shasum": "c3fa2f1e72d564ea32344351ff6a0d2a81c63619",
   "_shrinkwrap": null,
-  "_spec": "intl-tel-input@7.*",
-  "_where": "/home/sfomin/ng-intl-tel-input",
+  "_spec": "intl-tel-input@^7.1.1",
+  "_where": "/home/sfomin/projects/ng-intl-tel-input",
   "author": {
     "name": "Jack O'Connor",
     "url": "http://jackocnr.com"
@@ -70,21 +70,21 @@
   "gitHead": "cc028594f2f3c5fc95471ab8a61127df5805bc8f",
   "homepage": "https://github.com/Bluefieldscom/intl-tel-input",
   "keywords": [
-    "code",
+    "international",
+    "i18n",
     "country",
     "dial",
-    "flag",
-    "i18n",
-    "input",
-    "international",
+    "code",
+    "telephone",
     "mobile",
-    "telephone"
+    "input",
+    "flag"
   ],
   "license": "MIT",
   "maintainers": [
     {
-      "name": "jackocnr",
-      "email": "jackocnr@gmail.com"
+      "email": "jackocnr@gmail.com",
+      "name": "jackocnr"
     }
   ],
   "name": "intl-tel-input",

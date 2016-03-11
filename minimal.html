@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="betsol.intlTelInput.test">
+
+<head>
+    <title>ng-intl-tel-input minimal demo</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/intl-tel-input/build/css/intlTelInput.css">
+    <style>
+        body {
+            padding: 40px;
+            max-width: 700px;
+        }
+        .has-success input {
+            background-color: #DFD;
+        }
+        .has-error input {
+            background-color: #FDD;
+        }
+        .repo-button {
+            position: relative;
+            top: 10px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body ng-controller="TestController as vm">
+
+    <h1>ng-intl-tel-input minimal demo</h1>
+    <hr>
+
+    <form name="form">
+        <div
+            class="form-group"
+            ng-class="{
+                'has-success' : form.phoneNumber.$valid,
+                'has-error'   : form.phoneNumber.$invalid
+            }"
+        >
+            <label for="phone-number">Phone Number</label>
+            <input
+                id="phone-number"
+                name="phoneNumber"
+                class="form-control"
+                type="tel"
+                ng-model="vm.phoneNumber"
+                intl-tel-input
+            >
+        </div>
+    </form>
+
+    <p>Entered Phone Number: «<strong>{{ vm.phoneNumber }}</strong>»</p>
+
+    <hr>
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/intl-tel-input/build/js/intlTelInput.js"></script>
+    <script src="vendor/intl-tel-input/build/js/utils.js"></script>
+    <script src="vendor/intl-tel-input/lib/libphonenumber/build/utils.js"></script>
+    <script src="vendor/ng-intl-tel-input/scripts/betsol-ng-intl-tel-input.js"></script>
+    <script type="application/javascript">
+        (function (angular) {
+            'use strict';
+            angular
+                .module('betsol.intlTelInput.test', [
+                    'betsol.intlTelInput'
+                ])
+                .controller('TestController', function () {
+                    var vm = this;
+                    vm.phoneNumber = '+79031234567';
+                })
+            ;
+        })(angular);
+    </script>
+
+</body>
+
+</html>

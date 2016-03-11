@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "angular",
-      "/home/sfomin/ng-intl-tel-input"
+      "angular@^1.2.29",
+      "/home/sfomin/projects/ng-intl-tel-input"
     ]
   ],
-  "_from": "angular@latest",
+  "_from": "angular@>=1.2.29 <2.0.0",
   "_id": "angular@1.5.0",
   "_inCache": true,
   "_installable": true,
@@ -23,20 +23,20 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "angular",
-    "raw": "angular",
-    "rawSpec": "",
+    "raw": "angular@^1.2.29",
+    "rawSpec": "^1.2.29",
     "scope": null,
-    "spec": "latest",
-    "type": "tag"
+    "spec": ">=1.2.29 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#DEV:/"
+    "/"
   ],
-  "_resolved": "http://registry.npmjs.org/angular/-/angular-1.5.0.tgz",
+  "_resolved": "https://registry.npmjs.org/angular/-/angular-1.5.0.tgz",
   "_shasum": "d96ee97ab6df6cfd0915accbee484d098adb74ec",
   "_shrinkwrap": null,
-  "_spec": "angular",
-  "_where": "/home/sfomin/ng-intl-tel-input",
+  "_spec": "angular@^1.2.29",
+  "_where": "/home/sfomin/projects/ng-intl-tel-input",
   "author": {
     "email": "angular-core+npm@google.com",
     "name": "Angular Core Team"
@@ -56,24 +56,24 @@
   "homepage": "http://angularjs.org",
   "keywords": [
     "angular",
+    "framework",
     "browser",
-    "client-side",
-    "framework"
+    "client-side"
   ],
   "license": "MIT",
   "main": "index.js",
   "maintainers": [
     {
-      "name": "bclinkinbeard",
-      "email": "ben.clinkinbeard@gmail.com"
+      "email": "ben.clinkinbeard@gmail.com",
+      "name": "bclinkinbeard"
     },
     {
-      "name": "angularcore",
-      "email": "angular-core+npm@google.com"
+      "email": "angular-core+npm@google.com",
+      "name": "angularcore"
     },
     {
-      "name": "petebd",
-      "email": "pete@bacondarwin.com"
+      "email": "pete@bacondarwin.com",
+      "name": "petebd"
     }
   ],
   "name": "angular",

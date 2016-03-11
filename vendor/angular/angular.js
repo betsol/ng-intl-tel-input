@@ -26136,9 +26136,6 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    * `$modelValue`, i.e. either the last parsed value or the last value set from the scope.
    */
   this.$validate = function() {
-
-    console.log('this.$validate()', arguments);
-
     // ignore $validate before model is initialized
     if (isNumber(ctrl.$modelValue) && isNaN(ctrl.$modelValue)) {
       return;
@@ -26406,10 +26403,6 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    * @param {string} trigger Event that triggered the update.
    */
   this.$setViewValue = function(value, trigger) {
-    console.log('A.$setViewValue()', {
-      value: value,
-      trigger: trigger
-    });
     ctrl.$viewValue = value;
     if (!ctrl.$options || ctrl.$options.updateOnDefault) {
       ctrl.$$debounceViewValueCommit(trigger);
