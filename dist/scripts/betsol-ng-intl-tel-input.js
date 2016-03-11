@@ -10,6 +10,8 @@
 
   'use strict';
 
+  var VALIDATOR_NAME = 'phoneNumber';
+
   angular.module('betsol.intlTelInput', [])
 
     .constant('intlTelInputOptions', {})
@@ -62,12 +64,29 @@
           /**
            * Validating the input using plugin's API.
            */
-          modelCtrl.$validators.phoneNumber = function (modelValue, viewValue) {
-            if (!modelValue && !viewValue) {
-              return true;
-            }
-            return callApi('isValidNumber');
-          };
+          if ('undefined' !== typeof modelCtrl.$validators) {
+            // Using newer `$validators` API.
+            modelCtrl.$validators[VALIDATOR_NAME] = function (modelValue, viewValue) {
+              if (!modelValue && !viewValue) {
+                return true;
+              }
+              return isValidInput();
+            };
+          } else {
+            // Using legacy validation approach.
+            // This is required for Angular v1.2.x.
+            // @todo: deprecate this in the future!
+            var validateValue = function (value) {
+              if (!value) {
+                return value;
+              }
+              var isValid = isValidInput(value);
+              modelCtrl.$setValidity(VALIDATOR_NAME, isValid);
+              return value;
+            };
+            modelCtrl.$parsers.push(validateValue);
+            modelCtrl.$formatters.push(validateValue);
+          }
 
           /**
            * Destroying the plugin with the directive.
@@ -124,6 +143,27 @@
             $scope.$evalAsync(function () {
               modelCtrl.$setViewValue('', trigger);
             });
+          }
+
+          /**
+           * Validates the passed value, or the current value of the input.
+           * @todo: remove the workaround when this is implemented: https://github.com/jackocnr/intl-tel-input/issues/391
+           *
+           * @param {string} value
+           *
+           * @returns {boolean}
+           */
+          function isValidInput (value) {
+            var useWorkaround = ('undefined' !== typeof value);
+            if (useWorkaround) {
+              var previousValue = $element.val();
+              $element.val(value);
+            }
+            var result = callApi('isValidNumber');
+            if (useWorkaround) {
+              $element.val(previousValue);
+            }
+            return result;
           }
 
         }

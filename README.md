@@ -4,7 +4,7 @@
 [![Bower version](https://badge.fury.io/bo/betsol-ng-intl-tel-input.svg)](http://badge.fury.io/bo/betsol-ng-intl-tel-input)
 
 
-This module for Angular.js provides integration
+This module for Angular.js (`^1.2`) provides integration
 for the great [intl-tel-input][intl-tel-input] jQuery plugin.
 
 Please feel free to investigate [the original plugin][intl-tel-input]
