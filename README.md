@@ -164,6 +164,7 @@ Fork, clone, create a feature branch, implement your feature, cover it with test
 Run:
 
 - `npm i` to initialize the project
+- `npm i -g gulp` to install Gulp
 - `gulp build` to re-build the dist files
 - `gulp test` or `karma start` to test the code
 - `gulp start` to run demo server and watches
