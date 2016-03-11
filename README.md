@@ -132,6 +132,19 @@ angular
 
 - `setCountry({string} countryCode)`
 
+### Phone number validator
+
+This directive will add `phoneNumber` validator to the underlying model controller.
+You can use it to display validation errors.
+
+#### Validation Example
+
+```
+<span ng-show="formName.inputName.$error.phoneNumber">
+    Please enter a correct phone number!
+</span>
+```
+
 
 ## Changelog
 
