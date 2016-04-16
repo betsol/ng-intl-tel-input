@@ -126,6 +126,9 @@
             settingCountry = false;
           };
 
+          $scope.intlTelInputController.getSelectedCountryData = function() {
+            return callApi('getSelectedCountryData');
+          };
 
           function callApi () {
             return pluginApi.apply($element, arguments);
