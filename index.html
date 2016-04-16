@@ -8,7 +8,7 @@
     <style>
         body {
             padding: 40px;
-            max-width: 700px;
+            max-width: 800px;
         }
         .has-success input {
             background-color: #DFD;
@@ -91,6 +91,29 @@
         >Change Country to Russia</button>
     </div>
 
+    <div class="well btn-group" role="group">
+        <button
+            type="button"
+            class="btn btn-default"
+            ng-click="vm.showExtension()"
+        >Show Extension</button>
+        <button
+            type="button"
+            class="btn btn-default"
+            ng-click="vm.showSelectedCountryData()"
+        >Show Selected Country Data</button>
+        <button
+            type="button"
+            class="btn btn-default"
+            ng-click="vm.showNumber()"
+        >Show National Number</button>
+        <button
+            type="button"
+            class="btn btn-default"
+            ng-click="vm.showNumberType()"
+        >Show Number Type</button>
+    </div>
+
     <hr>
 
     <script src="vendor/jquery/jquery.js"></script>
@@ -110,8 +133,23 @@
                 })
                 .controller('TestController', function () {
                     var vm = this;
-                    vm.phoneNumber = '+79031234567';
+                    vm.phoneNumber = '+79031234567 ext. 123';
                     vm.phoneNumberCtrl = null;
+                    vm.showExtension = function () {
+                        alert(vm.phoneNumberCtrl.getExtension());
+                    };
+                    vm.showNumber = function () {
+                        alert(vm.phoneNumberCtrl.getNumber(intlTelInputUtils.numberFormat.NATIONAL));
+                    };
+                    vm.showNumberType = function () {
+                        alert(vm.phoneNumberCtrl.getNumberType());
+                    };
+                    vm.showSelectedCountryData = function () {
+                        alert(JSON.stringify(
+                            vm.phoneNumberCtrl.getSelectedCountryData(),
+                            null, 2
+                        ));
+                    };
                 })
             ;
         })(angular);

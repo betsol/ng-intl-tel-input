@@ -65,7 +65,7 @@
   "directories": {},
   "dist": {
     "shasum": "c3fa2f1e72d564ea32344351ff6a0d2a81c63619",
-    "tarball": "http://registry.npmjs.org/intl-tel-input/-/intl-tel-input-7.1.1.tgz"
+    "tarball": "https://registry.npmjs.org/intl-tel-input/-/intl-tel-input-7.1.1.tgz"
   },
   "gitHead": "cc028594f2f3c5fc95471ab8a61127df5805bc8f",
   "homepage": "https://github.com/Bluefieldscom/intl-tel-input",

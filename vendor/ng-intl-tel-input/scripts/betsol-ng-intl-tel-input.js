@@ -1,6 +1,6 @@
 /**
  * betsol-ng-intl-tel-input - intl-tel-input integration for Angular.js
- * @version v1.2.0
+ * @version v1.3.0
  * @link https://github.com/betsol/ng-intl-tel-input
  * @license MIT
  *
@@ -134,9 +134,31 @@
             settingCountry = false;
           };
 
+          $scope.intlTelInputController.getExtension = function () {
+            return callApi('getExtension');
+          };
+
+          $scope.intlTelInputController.getNumber = function () {
+            return callApiWithArguments('getNumber', arguments);
+          };
+
+          $scope.intlTelInputController.getNumberType = function () {
+            return callApi('getNumberType');
+          };
+
+          $scope.intlTelInputController.getSelectedCountryData = function () {
+            return callApi('getSelectedCountryData');
+          };
+
 
           function callApi () {
             return pluginApi.apply($element, arguments);
+          }
+
+          function callApiWithArguments (method, args) {
+            var callArgs = Array.prototype.slice.call(args);
+            callArgs.unshift(method);
+            return callApi.apply(null, callArgs);
           }
 
           function updateViewValue (trigger) {
