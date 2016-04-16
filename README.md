@@ -5,7 +5,7 @@
 
 
 This module for Angular.js (`^1.2.29`) provides integration
-for the great [intl-tel-input][intl-tel-input] (`^7.1.1`) jQuery plugin.
+for the great [intl-tel-input][intl-tel-input] jQuery plugin (version 7-8 are supported).
 
 Please feel free to investigate [the original plugin][intl-tel-input]
 for mode details, [features][intl-tel-input-features] and
