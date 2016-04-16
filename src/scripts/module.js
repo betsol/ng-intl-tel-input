@@ -126,12 +126,31 @@
             settingCountry = false;
           };
 
-          $scope.intlTelInputController.getSelectedCountryData = function() {
+          $scope.intlTelInputController.getExtension = function () {
+            return callApi('getExtension');
+          };
+
+          $scope.intlTelInputController.getNumber = function () {
+            return callApiWithArguments('getNumber', arguments);
+          };
+
+          $scope.intlTelInputController.getNumberType = function () {
+            return callApi('getNumberType');
+          };
+
+          $scope.intlTelInputController.getSelectedCountryData = function () {
             return callApi('getSelectedCountryData');
           };
 
+
           function callApi () {
             return pluginApi.apply($element, arguments);
+          }
+
+          function callApiWithArguments (method, args) {
+            var callArgs = Array.prototype.slice.call(args);
+            callArgs.unshift(method);
+            return callApi.apply(null, callArgs);
           }
 
           function updateViewValue (trigger) {

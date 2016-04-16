@@ -1,5 +1,11 @@
 # betsol-ng-intl-tel-input changelog
 
+## Version 1.3.0
+(16 Apr 2016)
+
+- Implemented missing API methods
+
+
 ## Version 1.2.0
 (11 Mar 2016)
 
